@@ -27,6 +27,7 @@
                 <td>{{ $loop->odd }}</td>
                 <td>{{ $loop->depth }}</td>
             </tr>
+        @endforeach
     </table>
-    @endforeach
+
 @endsection

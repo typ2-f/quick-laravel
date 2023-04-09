@@ -13,13 +13,10 @@
     <h2>chapter4</h2>
     <ul>
         <li><a href="/view/escape">escape</a></li>
-        <li><a href="/view/if">if</a></li>
-        <li><a href="/view/isset">isset</a></li>
-
         <li><a href="/view/comment">comment</a></li>
-
+        <li><a href="/view/if">if</a></li>
         <li><a href="/view/unless">unless</a></li>
-
+        <li><a href="/view/isset">isset</a></li>
         <li><a href="/view/switch">switch</a></li>
         <li><a href="/view/while">while</a></li>
         <li><a href="/view/for">for</a></li>
