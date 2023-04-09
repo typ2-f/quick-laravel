@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8" />
-    <title>速習Laravel</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
-</head>
-
-<body>
+@extends('layouts.base')
+@section('title', 'forelse')
+@section('main')
     <table class="table">
         <tr>
             <th>書名</th>
@@ -27,6 +20,4 @@
             <p>データは存在しません。</p>
         @endforelse
     </table>
-</body>
-
-</html>
+@endsection

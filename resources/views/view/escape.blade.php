@@ -1,3 +1,6 @@
+@extends('layouts.base')
+@section('title', $appTitle)
+@section('main')
 {{--
   View::shareの動作チェック
   app/Http/Proveiders/AppServiceProvider.php -> boot()
@@ -29,3 +32,4 @@
   <!--hoge-->はHTML標準のコメントアウト。
   クライアントに送信されるので、ソースを確認してもこの文章は出ないが上のtestは表示される。
 --}}
+@endsection

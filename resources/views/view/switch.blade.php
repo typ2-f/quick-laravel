@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8" />
-    <title>速習Laravel</title>
-</head>
-
-<body>
+@extends('layouts.base')
+@section('title', 'switch')
+@section('main')
     @switch($random)
         @case(5)
             <p>大ラッキーの一日です！</p>
@@ -27,6 +21,4 @@
         @default
             <p>umm…</p>
     @endswitch
-</body>
-
-</html>
+@endsection

@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('title', '共通レイアウトの基本')
+@section('title', 'master')
 @section('main')
     @parent
     <p>{{ $msg }}</p>

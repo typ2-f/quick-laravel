@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('title', '共通レイアウトの基本')
+@section('title', 'component')
 @section('main')
     {{--
     <x-my-alert type="success" :alert-title="$title">

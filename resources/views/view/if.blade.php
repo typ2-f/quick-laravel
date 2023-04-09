@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8" />
-    <title>速習Laravel</title>
-</head>
-
-<body>
+@extends('layouts.base')
+@section('title', 'if')
+@section('main')
     @if ($random < 50)
         <p>{{ $random }}は50未満です。</p>
     @elseif($random < 70)
@@ -18,7 +12,4 @@
     @env('local')
     local環境
     @endenv
-
-</body>
-
-</html>
+@endsection

@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8" />
-    <title>速習Laravel</title>
-</head>
-
-<body>
+@extends('layouts.base')
+@section('title', 'comment')
+@section('main')
     {{--
   これはコメントです。
   クライアントには、送信されません。
 --}}
-</body>
-
-</html>
+@endsection

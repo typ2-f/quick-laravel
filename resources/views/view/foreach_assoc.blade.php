@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8" />
-    <title>速習Laravel</title>
-</head>
-
-<body>
+@extends('layouts.base')
+@section('title', 'foreach_assoc')
+@section('main')
     @foreach ($member as $key => $value)
         <li>{{ $key }}：{{ $value }}</li>
     @endforeach
-</body>
-
-</html>
+@endsection

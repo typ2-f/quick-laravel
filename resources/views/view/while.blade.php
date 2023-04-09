@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8" />
-    <title>速習Laravel</title>
-</head>
-
-<body>
+@extends('layouts.base')
+@section('title', 'while')
+@section('main')
     @php
         $i = 0;
     @endphp
@@ -16,6 +10,4 @@
         @endphp
         <h{{ $i }}>{{ $i }}番目です。</h{{ $i }}>
     @endwhile
-</body>
-
-</html>
+@endsection

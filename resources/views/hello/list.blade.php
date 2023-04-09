@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8" />
-    <title>速習Laravel</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
-</head>
-
-<body>
+@extends('layouts.base')
+@section('title', '速習Laravel')
+@section('main')
     <table class="table">
         <tr>
             <th>No.</th>
@@ -31,6 +24,4 @@
             </tr>
         @endforeach
     </table>
-</body>
-
-</html>
+@endsection

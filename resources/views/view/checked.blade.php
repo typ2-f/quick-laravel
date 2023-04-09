@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8" />
-    <title>速習Laravel</title>
-</head>
-
-<body>
+@extends('layouts.base')
+@section('title', 'checked')
+@section('main')
     <input name="name" type="checkbox" @checked($isEnabled) />
-</body>
-
-</html>
+@endsection
