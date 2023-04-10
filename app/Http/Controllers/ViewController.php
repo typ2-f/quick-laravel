@@ -11,8 +11,8 @@ class ViewController extends Controller
     {
 
         return view('view.escape', [
-            'msg' => '<img src="https://wings.msn.to/image/wings.jpg" title="ロゴ" />
-        <p>WINGSへようこそ</p>'
+            'msg' => '<img src="https://2.bp.blogspot.com/-92v03A2PkYk/WdyDSK1210I/AAAAAAABHbI/Hjr-UvR8d-AcoPNABFAPvs7iN1Bl4NxjgCLcBGAs/s400/character_program_fat.png" title="ロゴ" />
+        <p>Laravelの勉強</p>'
         ]);
     }
 

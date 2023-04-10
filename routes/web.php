@@ -104,3 +104,28 @@ Route::resource('/articles', 'ArticleController');
 
 
 /*----chapter6---------------------------------------------------------------*/
+Route::controller(CtrlController::class)->group(function () {
+    Route::prefix('/ctrl')->group(function () {
+        Route::get('/plain' , 'plain');
+        Route::get('/header', 'header');
+        Route::get('/outJson', 'outJson');
+        Route::get('/outFile', 'outFile');
+        Route::get('/outCsv', 'outCsv');
+        Route::get('/outImage', 'outImage');
+        Route::get('/redirectBasic', 'redirectBasic');
+        Route::get('/index', 'index');
+        Route::get('/hoge/{id?}', 'hoge');
+        Route::get('/form/{name?}', 'form');
+        Route::post('/result', 'result');
+        Route::get('/upload', 'upload');
+        Route::post('/uploadfile', 'uploadfile');
+        Route::get('/middle', 'middle')
+            ->middleware(LogMiddleware::class);
+        // ->middleware(LogMiddleware::class, HogeMiddleWare::class);
+        // Route::group(['middleware' => [ 'debug' ]], function () {
+        //     Route::get('/ctrl/middle', 'CtrlController@middle');
+        //   });
+        // Route::get('/ctrl/middle', 'CtrlController@middle');
+    });
+});
+Route::get('/ctrl/basic', 'CtrlController@basic');

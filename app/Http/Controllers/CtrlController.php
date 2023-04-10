@@ -25,16 +25,16 @@ class CtrlController extends Controller
 
   public function header()
   {
+    // return response()
+    //   ->view('ctrl.header', ['msg' => 'こんにちは、世界！'], 200)
+    //   ->header('Content-Type', 'text/xml');
+
     return response()
       ->view('ctrl.header', ['msg' => 'こんにちは、世界！'], 200)
-      ->header('Content-Type', 'text/xml');
-
-    // return response()
-    //     ->view('ctrl.header', [ 'msg' => 'こんにちは、世界！' ], 200)
-    //     ->withHeaders([
-    //         'Content-Type' => 'text/xml',
-    //         'X-Powered-FW' => 'Laravel/9'
-    //     ]); 
+      ->withHeaders([
+        'Content-Type' => 'text/xml',
+        'X-Powered-FW' => 'Laravel/9'
+      ]);
   }
 
   public function outJson()

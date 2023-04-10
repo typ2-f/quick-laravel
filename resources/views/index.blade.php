@@ -1,6 +1,7 @@
 @extends('layouts.base')
 @section('title', 'index')
 @section('main')
+
     <h1>一覧</h1>
     <!--chapter3-->
     <h2>chapter3</h2>
@@ -28,5 +29,24 @@
         <li><a href="/view/master">master</a></li>
         <li><a href="/view/comp">comp</a></li>
         <li><a href="/view/list">list</a></li>
+    </ul>
+
+    <!--chapter5-->
+    <h2>chapter5</h2>
+    <ul>
+        <li><a href= 'ctrl/plain'>plain</a></li>
+        <li><a href= 'ctrl/header'>header</a></li>
+        <li><a href= 'ctrl/outJson'>outJson</a></li>
+        <li><a href= 'ctrl/outFile'>outFile</a></li>
+        <li><a href= 'ctrl/outCsv'>outCsv</a></li>
+        <li><a href= 'ctrl/outImage'>outImage</a></li>
+        <li><a href= 'ctrl/redirectBasic'>redirectBasic</a></li>
+        <li><a href= 'ctrl/index'>index</a></li>
+        <li><a href= 'ctrl/hoge/{id?}'>hoge</a></li>
+        <li><a href= 'ctrl/form/{name?}'>form</a></li>
+        <li><a href= post'ctrl/result'>result</a></li>
+        <li><a href= 'ctrl/upload'>upload</a></li>
+        <li><a href= post'ctrl/uploadfile'>uploadfile</a></li>
+        <li><a href= 'ctrl/middle'>middle</a></li>
     </ul>
 @endsection
