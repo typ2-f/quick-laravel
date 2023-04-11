@@ -33,6 +33,7 @@ class RouteController extends Controller
   }
 }
 
+//一般に列挙帯は別ファイルに切り出す
 enum Category: string
 {
   case Language = 'lang';

@@ -17,6 +17,7 @@ class CtrlController extends Controller
 
   public function plain()
   {
+    //responseオブジェクトの利用でステータス、ヘッダーなどの情報を付与できる。
     return response('こんにちは、世界！', 200)
       ->header('Content-Type', 'text/plain');
 
@@ -64,13 +65,22 @@ class CtrlController extends Controller
   public function outFile()
   {
     return response()
+      // ->download(
+      //   'C:/data/data_log.csv',
+      //   'download.csv',
+      //   ['content-type' => 'text/csv']
+      // );
+
+      //puclicに置いているstyle.cssをダウンロードさせてみる
+      //第2引数はファイル名で、指定しない場合同じ名前になる
       ->download(
-        'C:/data/data_log.csv',
-        'download.csv',
-        ['content-type' => 'text/csv']
+        'css/style.css',
+        'test.css',
+        ['content-type' => 'force-download']
       );
   }
 
+  //生成したデータをDLさせることも可能、もちろん動的にすることもできる
   public function outCsv()
   {
     return response()
@@ -84,20 +94,31 @@ class CtrlController extends Controller
       }, 'download.csv', ['content-type' => 'text/csv']);
   }
 
+  //ダウンロードではなくブラウザに描画させる
   public function outImage()
   {
     return response()
-      ->file('C:/data/wings.png', ['content-type' => 'image/png']);
+      ->file('index.php', ['content-type' => 'text/php']);
   }
 
+  //リダイレクトの方法
   public function redirectBasic()
   {
     return redirect('hello/list');
-    //   return redirect()->route('list');
-    //   return redirect()->route('param', [ 'id' => 108 ]);
-    //   return redirect()->action('RouteController@param', [ 'id' => 108 ]);
-    //   return redirect()->away('https://wings.msn.to/');
+    //  return redirect()->route('list');
+    //  return redirect()->route('param', [ 'id' => 108 ]);
+    //  return redirect()->action('RouteController@param', [ 'id' => 108 ]);
+    //  return redirect()->away('https://qiita.com/');
   }
+
+  //chap6.1.6 メンテナンスモード
+  //下記コマンドでLaravelアプリを一時的に休止/解除できる。
+  //php artisan down , php artisan up
+  //
+  //・オプション
+  //--render "maintain" ->resource/views/maintain.blade を表示する
+  //--secret="test" メンテナンス中にもアクセスできるパスワードを設定
+
 
   public function index(Request $req)
   {
@@ -105,7 +126,7 @@ class CtrlController extends Controller
     return 'リクエストパス：' . request()->path();
   }
 
-  public function hoge(Request $request, $id)
+  public function hoge(Request $request, $id = 1)
   {
     return 'id値：' . $id;
   }

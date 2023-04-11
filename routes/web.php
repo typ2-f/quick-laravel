@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\HelloController;
+use App\Http\Middleware\LogMiddleware;
 
 
 /*
@@ -28,16 +29,16 @@ Route::get('/', function () {
 //RouteServiceProviderでControllerの名前空間を登録しておくと更に単純化できる
 Route::get('/hello', 'HelloController@index');
 Route::get('/hello/view', 'HelloController@view');
-Route::get('/hello/list', 'HelloController@list');
+Route::get('/hello/list', 'HelloController@list')->name('list');
 
 /*----chapter4----*/
 //各URLをまとめたページが欲しいので、参考書にはない'/index'を追加
 Route::get('/index', 'IndexController@index');
 
-//chap5確認のため、controllerとprefixを利用
+//chap5.3.1/2確認のため、controllerとprefixを利用
 Route::controller(ViewController::class)->group(function () {
     Route::prefix('/view')->group(function () {
-        Route::get('/escape', 'escape');
+        Route::get('/escape', 'escape')->name('escape');
         Route::get('/comment', 'comment');
         Route::get('/if', 'if');
         Route::get('/unless', 'unless');
@@ -80,11 +81,11 @@ Route::namespace('Main')->group(function () {
 //viewを直接返す
 Route::view('/route', 'route.view', ['name' => 'Laravel']);
 
-//パラメーターをEnum型にできるらしい。Enum型ってなに？
+//パラメーターをEnum型にできる
 Route::get('/route/enum_param/{category}', 'RouteController@enum_param');
 
-Route::redirect('/hoge', '/');
-Route::redirect('/fuga', '/', 301);
+Route::redirect('/hoge', '/index');
+Route::redirect('/fuga', '/index', 301);
 
 //resourceルートでCRUDをまとめて定義できる。exceptにより無効化の指定も可能。
 Route::resource('/articles', 'ArticleController');
@@ -119,8 +120,8 @@ Route::controller(CtrlController::class)->group(function () {
         Route::post('/result', 'result');
         Route::get('/upload', 'upload');
         Route::post('/uploadfile', 'uploadfile');
-        Route::get('/middle', 'middle')
-            ->middleware(LogMiddleware::class);
+        Route::get('/middle', 'middle');
+        //->middleware(LogMiddleware::class);
         // ->middleware(LogMiddleware::class, HogeMiddleWare::class);
         // Route::group(['middleware' => [ 'debug' ]], function () {
         //     Route::get('/ctrl/middle', 'CtrlController@middle');
