@@ -79,8 +79,15 @@
     <li><a href="/state/session1">session1</a></li>
     <li><a href="/state/session2">session2</a></li>
 
+    <!--chapter8-->
+    <h2>chapter8</h2>
+    <li><a href="/record/find">find</a></li>
+    <li><a href="/record/where">where</a></li>
+    <li><a href="/record/hasmany">hasMany</a></li>
 
 
-
-
+    <!--chapter9-->
+    <h2>chapter9</h2>
+    <li><a href="/save/create">create</a></li>
+    <p>他のアクションについてはchapter8のページに実装</p>
 @endsection
