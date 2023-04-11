@@ -29,6 +29,7 @@ class StateController extends Controller
     ]);
   }
 
+  //セッションの保存先の設定はconfig/session.phpから可能
   public function session1(Request $req)
   {
     $req->session()->put('series', '速習シリーズ');
@@ -42,7 +43,8 @@ class StateController extends Controller
     // $series = $req->session()->get('series', function() {
     //     return '未定';
     // });
-
+    
+    //session関数でもできる
     // session([ 'series' => '速習シリーズ' ]);
     // $series = session('series', '未定');
 

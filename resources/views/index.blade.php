@@ -68,7 +68,19 @@
         <li><a href='ctrl/hoge/{id?}'>hoge</a></li>
         <li><a href='ctrl/form/{name?}'>form</a></li>
         <li><a href='ctrl/upload'>upload</a></li>
-        <li><a href=post'ctrl/uploadfile'>uploadfile</a></li>
         <li><a href='ctrl/middle'>middle</a></li>
+        <li><a href='ctrl/basic'>middle</a>&lpar;コントローラー内ミドルウェア&rpar;</li>
     </ul>
+    <!--chapter7-->
+    <h2>chapter7</h2>
+    <li><a href="/state/recCookie">recCookie</a></li>
+    <li><a href="/state/delCookie">delCookie</a></li>
+    <li><a href="/state/readCookie">readCookie</a></li>
+    <li><a href="/state/session1">session1</a></li>
+    <li><a href="/state/session2">session2</a></li>
+
+
+
+
+
 @endsection

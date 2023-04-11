@@ -18,7 +18,15 @@ return [
     |
     */
 
-    'driver' => env('SESSION_DRIVER', 'file'),
+    /*
+    |   セッションの保存先
+    |   file: storage/framework/sessions
+    |   cookie: 暗号化クッキー
+    |   database:
+    |   memchached/redis: キャッシュサーバー
+    |   array: 配列(テストのためのモード)
+    */
+    'driver' => env('SESSION_DRIVER', 'database'),
 
     /*
     |--------------------------------------------------------------------------

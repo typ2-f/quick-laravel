@@ -130,3 +130,28 @@ Route::controller(CtrlController::class)->group(function () {
     });
 });
 Route::get('/ctrl/basic', 'CtrlController@basic');
+
+
+/*----chapter7---------------------------------------------------------------*/
+Route::get('/state/recCookie', 'StateController@recCookie');
+Route::get('/state/delCookie', 'StateController@delCookie');
+Route::get('/state/readCookie', 'StateController@readCookie');
+Route::get('/state/session1', 'StateController@session1');
+Route::get('/state/session2', 'StateController@session2');
+
+/*----chapter8---------------------------------------------------------------*/
+Route::get('/record/find', 'RecordController@find');
+Route::get('/record/where', 'RecordController@where');
+Route::get('/record/hasmany', 'RecordController@hasmany');
+
+/*----chapter9---------------------------------------------------------------*/
+Route::get('/save/create', 'SaveController@create');
+Route::post('/save', 'SaveController@store');
+Route::get('/save/{id}/edit', 'SaveController@edit');
+Route::patch('/save/{id}', 'SaveController@update');
+Route::get('/save/{id}', 'SaveController@show');
+Route::delete('/save/{id}', 'SaveController@destroy');
+
+// Route::resource('/save', 'SaveController');
+// Route::resource('/save', 'SaveController')
+//     ->except([ 'edit', 'update' ]);
