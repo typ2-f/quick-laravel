@@ -9,7 +9,7 @@ class CtrlController extends Controller
   public function __construct()
   {
     $this->middleware(function ($request, $next) {
-      file_put_contents('C:/data/access.log', date('Y-m-d H:i:s'), FILE_APPEND);
+      file_put_contents('../storage/logs/test.txt', date('Y-m-d H:i:s'), FILE_APPEND);
       return $next($request);
     })->only(['basic', 'basic2']);
     // });
