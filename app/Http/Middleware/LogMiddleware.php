@@ -16,7 +16,7 @@ class LogMiddleware
    */
   public function handle(Request $request, Closure $next)
   {
-    file_put_contents('C:/data/access.log',
+    file_put_contents('../storage/logs/test.txt',
       date('Y-m-d H:i:s') . "\n", FILE_APPEND);
     // $request->merge([
     //     'title' => '速習Laravel',
